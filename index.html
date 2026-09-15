@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice Loop</title>
+    <meta name="description" content="A quiet practice timer for making time for the music." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Practice Loop" />
+    <meta property="og:description" content="A quiet practice timer for making time for the music." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Practice Loop" />
+    <meta name="twitter:description" content="A quiet practice timer for making time for the music." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="Practice Loop home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>Practice Loop</span></a>
+        <div class="topbar-note"><span class="status-dot"></span> Your quiet studio</div>
+      </header>
+      <div class="page-grid">
+        <section class="practice-column" aria-labelledby="page-title">
+          <div class="intro"><p class="eyebrow">Daily session <span></span></p><h1 id="page-title">Make room<br /><em>for the music.</em></h1><p class="intro-copy">A small, steady place to start. Choose a pocket of time, then let the work take over.</p></div>
+          <div class="timer-card" id="timer-card"><div class="timer-card-head"><span class="section-label">Session length</span><span class="session-state" id="session-state">Ready when you are</span></div><div class="duration-picker" role="group" aria-label="Choose session length"><button class="duration-option" type="button" data-minutes="5">5 <span>min</span></button><button class="duration-option is-selected" type="button" data-minutes="15">15 <span>min</span></button><button class="duration-option" type="button" data-minutes="30">30 <span>min</span></button></div><div class="timer-display" aria-live="polite"><svg class="timer-ring" viewBox="0 0 240 240" aria-hidden="true"><circle class="ring-track" cx="120" cy="120" r="104"></circle><circle class="ring-progress" id="ring-progress" cx="120" cy="120" r="104"></circle></svg><div class="timer-center"><span class="timer-value" id="timer-value">15:00</span><span class="timer-caption" id="timer-caption">minutes to yourself</span></div></div><div class="timer-actions"><button class="button button-primary" id="toggle-timer" type="button"><span class="button-icon play-icon" id="toggle-icon" aria-hidden="true"></span><span id="toggle-label">Begin practice</span></button><button class="button button-quiet" id="reset-timer" type="button">Reset</button></div></div>
+          <div class="note-card"><div class="note-heading"><div><p class="section-label">Session note</p><p class="note-hint">Leave yourself a thread to pick up next time.</p></div><span class="note-count" id="note-count">0 / 240</span></div><label class="visually-hidden" for="session-note">What did you work on?</label><textarea id="session-note" maxlength="240" rows="3" placeholder="Scales, a tricky bar, a new idea…"></textarea><div class="note-footer"><span class="save-hint" id="save-hint">Complete the timer to save a note.</span><button class="button button-save" id="save-session" type="button" disabled>Save session</button></div></div>
+        </section>
+        <aside class="history-column" aria-labelledby="history-title"><div class="history-header"><div><p class="eyebrow">Your record <span></span></p><h2 id="history-title">Recent sessions</h2></div><span class="session-count" id="session-count">0</span></div><div class="stats-strip"><div class="stat"><span class="stat-value" id="total-minutes">0</span><span class="stat-label">minutes played</span></div><div class="stat-divider"></div><div class="stat"><span class="stat-value" id="total-sessions">0</span><span class="stat-label">sessions logged</span></div></div><div class="history-list" id="history-list"></div><div class="empty-state" id="empty-state"><span class="empty-mark" aria-hidden="true"><i></i><i></i><i></i></span><p class="empty-title">Your first session<br />is waiting.</p><p class="empty-copy">Finish a timer and your notes will settle here, ready for the next practice.</p></div><button class="clear-history" id="clear-history" type="button" hidden>Clear practice history</button><p class="privacy-note"><span class="lock-mark" aria-hidden="true"></span> Saved only in this browser</p></aside>
+      </div>
+      <footer class="footer"><span>Practice is a return, not a performance.</span><span class="footer-rule"></span><span>One loop at a time</span></footer>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
